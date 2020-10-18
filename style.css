@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cera Pro';
+}
+button {
+    font-family: 'Cera Pro';
+    font-weight: 400;
+    background-color: white;
+    padding: 5px 10px;
+    color: rgb(85, 85, 85);
+    border: 1px solid rgb(195, 195, 195);
+    border-radius: 4px;
+    font-size: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+button:focus {
+    outline: none;
+    box-shadow: 0 0 8px 0px rgb(66, 170, 255);
+    color: rgb(66, 170, 255);
+    transition: 0.3s;
+}
+button:hover {
+    outline: none;
+    color: rgb(66, 170, 255);
+}
+textarea {
+    resize: none;
+    transform: translateY(9px);
+    height: 25px;
+    font-size: 12px;
+    width: 400px;
+}
+input {
+    font-family: 'Cera Pro';
+    font-weight: 400;
+    background-color: white;
+    padding: 5px 7px;
+    color: rgb(85, 85, 85);
+    border: 1px solid rgb(195, 195, 195);
+    border-radius: 4px;
+    font-size: 100%;
+    transition: 0.3s;
+}
+input:focus {
+    outline: none;
+    box-shadow: 0 0 8px 0px rgb(66, 170, 255);
+    transition: 0.3s;
+}
+input:hover {
+    outline: none;
+}
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.part {
+    background-color: rgb(247, 247, 247);
+}
+h1 {
+    text-align: center;
+    font-size: 250%;
+}
+.main h1 {
+    font-size: 200%;
+    color: rgb(63, 63, 63);
+}
+#userList {
+    max-width: 90%;
+    background-color: white;
+    color: black;
+    font-family: monospace;
+    margin: 0 auto;
+    overflow-y: scroll;
+    height: 300px;
+}
+.user {
+    text-align: left;
+    padding: 10px;
+    font-weight: 900;
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+#winner {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    font-size: 150%;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 10px;
+}
+#pog {
+    position: absolute;
+    top: -25px;
+    left: -50px;
+    width: 100px;
+}
+#tozsamosc {
+    display: none;
+}
+.userList {
+    max-width: 90%;
+    background-color: white;
+    color: black;
+    font-family: monospace;
+    margin: 0 auto;
+    overflow-y: scroll;
+    height: 70px;
+    text-align: left;
+}
