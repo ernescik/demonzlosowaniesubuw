@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pozdro cie widzu</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="font/stylesheet.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Losowanie subów z pierdolonego raida </h1>
+    <div class="main" style="text-align: center;">
+        <div class="part" style="border-right: 1px solid rgb(230, 230, 230);">
+            <h1>1. Wprowadź dane</h1>
+            Tutaj wklej listę uzytkownikow po czym kliknij przycisk importuj<br><b>Po prostu skopiuj listę uzytkownikow i wklej ja do wyznaczonego miejsca. A nicki w liscie powinny byc oddzielone enterami !! !11 !</b><br>
+            <textarea id="inputUsers" placeholder="tutaj debilu"></textarea> <button onclick="importData()">Importuj</button><br><br>
+            <div id="userList">
+
+            </div><br>
+            <b style="font-size: 150%;">Jezeli chcesz zobaczyc czy ktos jest na liscie to kliknij CTRL + F i tam wpisz nick spoko?</b><br><br>
+        </div>
+        <div class="part" style="border-right: 1px solid rgb(230, 230, 230);">
+            <h1>2. Losuj</h1>
+            <b style="color: rgb(72, 72, 72); width: 80%; margin: 0 auto; display: block;">Ok jak zaladowales liste uzytkownikuw to klikasz uruhom mahine, jakis wic zostanie wylosowany i klikasz czu wic ma aktualnie suba (zeby zgiftowac mu puzniej) czy jest wic bez suba i juz mu suba zgiftowales. Na koncu kliknij przycisk na dole.</b><br>
+            <b style="font-size: 150%; color: rgb(230, 91, 91);">Jak coś to osoba która zostala wyslowoana nie ma mozliwosci zeby zostala wylosowana jeszcze ras</b><br><br>
+            <button onclick="losuj()">Uruchom machine</button>  <span id="liczba">0</span>/100<br><br>
+            <div id="winner">
+                <img src="pogchamp.png" id="pog">
+                kliknij uruchom machine chlorze
+            </div><br>
+            tera amrah wybierz czy wic ma aktaulnie suba zeby zgiftowac mu puzniej, czy juz tera mu giftujesz<br><br>
+            <button onclick="subOrSub(true)">gift pozniej</button> <button onclick="subOrSub(false)">gift teraz</button><br><br>
+            Tera najwazniejsze!!! <br><br>
+            <button onclick="openmenu()" >Kliknij</button>
+            <div id="tozsamosc">
+                <h1>Określ płeć widza</h1>
+                <input type="checkbox">agender<br>
+                <input type="checkbox">androgyne<br>
+                <input type="checkbox">androgynous<br>
+                <input type="checkbox">bisgender<br>
+                <input type="checkbox">cis<br>
+                <input type="checkbox">cisgender<br>
+                <input type="checkbox">cis female<br>
+                <input type="checkbox">cis male<br>
+                <input type="checkbox">cis man<br>
+                <input type="checkbox">cis woman<br>
+                <input type="checkbox">cisgender female<br>
+                <input type="checkbox">cisgender male<br>
+                <input type="checkbox">cisgender man <br>
+                <input type="checkbox">cisgander woman<br>
+                <input type="checkbox">female to male<br>
+                <input type="checkbox">FTM<br>
+                <input type="checkbox">gender fluid<br>
+                <input type="checkbox">gender nonconforming<br>
+                <input type="checkbox">gender questioning<br>
+                <input type="checkbox">gender variatn<br>
+                <input type="checkbox">genderqueer<br>
+                <input type="checkbox">intersex<br>
+                <input type="checkbox">male to female<br>
+                <input type="checkbox">MTF<br>
+                <input type="checkbox">neither<br>
+                <input type="checkbox">neutrois<br>
+                <input type="checkbox">non-binary<br>
+                <input type="checkbox">other<br>
+                <input type="checkbox">pangender<br>
+                <input type="checkbox">trans<br>
+                <input type="checkbox">trans female<br>
+                <input type="checkbox">trans male<br>
+                <input type="checkbox">trans man<br>
+                <input type="checkbox">trans woman<br>
+                <input type="checkbox">trans person<br>
+                <input type="checkbox">trasnferminine<br>
+                <input type="checkbox">transgender <br>
+                <input type="checkbox">transgender female<br>
+                <input type="checkbox">transgender male<br>
+                <input type="checkbox">transgender man <br>
+                <input type="checkbox">transgender person<br>
+                <input type="checkbox">transgender woman<br>
+                <input type="checkbox">transmasculine<br>
+                <input type="checkbox">transsexual<br>
+                <input type="checkbox">transsexual female<br>
+                <input type="checkbox">transsexual male<br>
+                <input type="checkbox">transsexual man<br>
+                <input type="checkbox">transsexual person<br>
+                <input type="checkbox">transsexual woman<br>
+                <input type="checkbox">two-spirit<br>
+            </div>
+        </div>
+        <div class="part">
+            <h1>3. Wynik</h1>
+            Lista wszystkich widzów którzy wzieli udział: 
+            <div class="userList" id="allUsers"></div>
+            Lista widzów którzy nie wygrali sadge:
+            <div class="userList" id="losers"></div>
+            Lista widzów którzy wygrali ale aktualnie mają suba:
+            <div class="userList" id="alredySub"></div>
+            Lista widzów którzy wygrali i nie mają suba:
+            <div class="userList" id="subGifted"></div>
+            Lista wszystko z jednym, do skopiowania:
+            <div class="userList" id="allInOne" style="height: 150px;"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
